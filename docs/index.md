@@ -15,9 +15,8 @@ apply. This is for people who are already in.
 
 ## New here?
 
-Read **[Start here](./start-here/index.md)** first — four short pages, about ten minutes.
-Then get your **[inductions](./safety/getting-inducted.md)** booked, because most of the
-interesting machines are locked until you have them.
+Read **[Start here](./start-here/index.md)** first — four short pages.
+Then get your **[inductions](./safety/getting-inducted.md)**
 
 ## Looking for something specific
 
@@ -34,19 +33,17 @@ interesting machines are locked until you have them.
 
 ## The three rules that matter most
 
-1. **No induction, no machine.** Every tool page says whether it needs one. Using a
-   locked-out tool is the one thing that gets a membership reviewed on first offence.
+1. **No induction, no machine.** Every tool page says whether it needs one. Using a tool without prior experience or training might result in damaging the tool or harming you / others. We take this seriously, and it's the one thing that gets a membership reviewed on first offence.
 2. **Leave it as you found it, or better.** The bench, the machine, the bin, the floor.
 3. **Say when you break something.** Nobody is in trouble for a broken tool. People are
    in trouble for a broken tool that the next member discovers at 3am.
 
 ## This wiki is wrong somewhere
 
-It always is. Tool quirks drift, maintainers change, firmware moves. If you hit something
-stale, fix it — see [Contributing](./contributing.md). Pages carrying facts nobody has
+If you hit something stale page or error, fix it — see [Contributing](./contributing.md). Pages carrying facts nobody has
 confirmed yet are marked with a box like this:
 
-:::info[Needs a real answer]
-Marked like this, this page's content is a placeholder written when the wiki was set up.
+:::info[Needs human]
+Marked like this, this page's content is a placeholder written when by AI the wiki was set up.
 Anyone who knows the real answer should replace it.
 :::
