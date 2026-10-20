@@ -1,0 +1,6 @@
+{
+  "label": "Tools & equipment",
+  "position": 3,
+  "collapsed": true,
+  "link": { "type": "doc", "id": "tools/index" }
+}

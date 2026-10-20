@@ -1,0 +1,374 @@
+/* ============================================================
+   Flipper Hackspace wiki — Infima overrides
+   ------------------------------------------------------------
+   The tokens here are the same values as ../../src/styles/global.css
+   on the landing page. They are duplicated rather than imported because
+   Docusaurus is a separate build and the landing page's stylesheet also
+   carries ~900 lines of section layout this site has no use for.
+
+   If a colour changes on the landing page, change it in BOTH places.
+   The authoritative list is the `:root` block in global.css.
+
+   Two rules carried over from the landing page:
+
+   1. Orange has two values. `#FF8200` is a fill. On the light ground it
+      measures 1.76:1 as text and fails contrast, so light-mode text and
+      links use `#96430A` and only dark mode promotes `#FF8200` to a text
+      colour. That is why the primary ramp differs between themes.
+
+   2. Headings are condensed uppercase Archivo — but only h1 and h2 here.
+      The landing page uppercases h3 too; in a wiki page with a dozen
+      subheadings that reads as shouting and slows scanning, so h3+ keep
+      sentence case at a normal width.
+   ============================================================ */
+
+:root {
+  /* ---- landing-page palette, light ---- */
+  --fh-bg: #d8dad1;
+  --fh-surface: #e3e5dc;
+  --fh-ink: #14170f;
+  --fh-ink-2: #5d6353;
+  --fh-line: #b8bcae;
+  --fh-line-strong: #14170f;
+  --fh-orange: #ff8200;
+  --fh-yellow: #fff705;
+  --fh-on-bright: #14100a;
+  /* Constant slabs — these never flip with the theme, as on the landing page. */
+  --fh-slab: #111309;
+  --fh-on-slab: #dfe2d6;
+
+  --fh-display: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --fh-mono: 'Martian Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* ---- Infima primary: the accessible orange, not the fill orange ---- */
+  --ifm-color-primary: #96430a;
+  --ifm-color-primary-dark: #873c09;
+  --ifm-color-primary-darker: #7f3909;
+  --ifm-color-primary-darkest: #692f07;
+  --ifm-color-primary-light: #a54a0b;
+  --ifm-color-primary-lighter: #ad4e0c;
+  --ifm-color-primary-lightest: #c35a0d;
+
+  --ifm-background-color: var(--fh-bg);
+  --ifm-background-surface-color: var(--fh-surface);
+  --ifm-font-color-base: var(--fh-ink);
+  --ifm-font-color-secondary: var(--fh-ink-2);
+  --ifm-heading-color: var(--fh-ink);
+  --ifm-toc-border-color: var(--fh-line);
+  --ifm-hr-border-color: var(--fh-line);
+  --ifm-table-border-color: var(--fh-line);
+  --ifm-table-stripe-background: rgba(20, 23, 15, 0.035);
+  --ifm-blockquote-color: var(--fh-ink-2);
+  --ifm-blockquote-border-color: var(--fh-orange);
+
+  --ifm-font-family-base: var(--fh-display);
+  --ifm-font-family-monospace: var(--fh-mono);
+  --ifm-heading-font-family: var(--fh-display);
+  --ifm-font-weight-semibold: 700;
+  --ifm-heading-font-weight: 800;
+
+  --ifm-code-font-size: 88%;
+  --ifm-code-background: rgba(20, 23, 15, 0.06);
+  --ifm-code-padding-horizontal: 0.3rem;
+  --ifm-code-padding-vertical: 0.12rem;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 130, 0, 0.14);
+
+  /* Square, like every edge on the landing page. */
+  --ifm-global-radius: 0;
+  --ifm-button-border-radius: 0;
+  --ifm-alert-border-radius: 0;
+  --ifm-card-border-radius: 0;
+  --ifm-pre-border-radius: 0;
+
+  --ifm-navbar-background-color: var(--fh-bg);
+  --ifm-navbar-shadow: none;
+  --ifm-navbar-height: 3.5rem;
+  /* The footer slab. `footer--dark` redefines these on the element, so the
+     real override is the `.footer--dark` rule further down, not these. */
+  --ifm-footer-background-color: var(--fh-slab);
+  --ifm-footer-color: var(--fh-on-slab);
+  --ifm-footer-link-color: rgba(223, 226, 214, 0.72);
+  --ifm-footer-title-color: var(--fh-on-slab);
+
+  --ifm-menu-color: var(--fh-ink-2);
+  --ifm-menu-color-active: var(--fh-ink);
+  --ifm-menu-color-background-active: rgba(20, 23, 15, 0.055);
+  --ifm-menu-color-background-hover: rgba(20, 23, 15, 0.04);
+}
+
+/* Dark palette, declared in BOTH places so an explicit choice wins either
+   way — the same discipline as global.css. Docusaurus always stamps
+   data-theme, but the media query keeps the pre-hydration paint right. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --fh-bg: #0d0f0b;
+    --fh-surface: #161a11;
+    --fh-ink: #dfe2d6;
+    --fh-ink-2: #868c79;
+    --fh-line: #2a2f22;
+    --fh-line-strong: #3c4331;
+  }
+}
+
+[data-theme='dark'] {
+  --fh-bg: #0d0f0b;
+  --fh-surface: #161a11;
+  --fh-ink: #dfe2d6;
+  --fh-ink-2: #868c79;
+  --fh-line: #2a2f22;
+  --fh-line-strong: #3c4331;
+
+  /* Dark ground: the fill orange is legible, so it becomes the text orange. */
+  --ifm-color-primary: #ff8200;
+  --ifm-color-primary-dark: #e67500;
+  --ifm-color-primary-darker: #d96e00;
+  --ifm-color-primary-darkest: #b35b00;
+  --ifm-color-primary-light: #ff8f1a;
+  --ifm-color-primary-lighter: #ff9a2e;
+  --ifm-color-primary-lightest: #ffb366;
+
+  --ifm-code-background: rgba(223, 226, 214, 0.1);
+  --ifm-table-stripe-background: rgba(223, 226, 214, 0.04);
+  --docusaurus-highlighted-code-line-bg: rgba(255, 130, 0, 0.2);
+  --ifm-menu-color-background-active: rgba(223, 226, 214, 0.06);
+  --ifm-menu-color-background-hover: rgba(223, 226, 214, 0.045);
+}
+
+/* ---------- type ---------- */
+
+h1,
+h2 {
+  font-variation-settings: 'wdth' 125;
+  text-transform: uppercase;
+  letter-spacing: -0.018em;
+  line-height: 0.92;
+}
+
+/* Long single words (RESPONSIBLE, INDUCTIONS, MEMBERSHIPS) are wider than a
+   narrow column at wdth 125 — same fix as the landing page. */
+@media (max-width: 620px) {
+  h1,
+  h2 {
+    font-variation-settings: 'wdth' 100;
+  }
+}
+
+.markdown h1:first-child {
+  --ifm-h1-font-size: clamp(2rem, 6vw, 3.1rem);
+  margin-bottom: 1.25rem;
+}
+
+.markdown > h2 {
+  --ifm-h2-font-size: clamp(1.4rem, 3vw, 1.9rem);
+  border-top: 1px solid var(--fh-line);
+  padding-top: 1.6rem;
+  margin-top: 2.4rem;
+}
+
+.markdown > h3 {
+  --ifm-h3-font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- navbar ---------- */
+
+.navbar {
+  border-bottom: 1px solid var(--fh-line-strong);
+}
+
+.navbar__title,
+.navbar__link,
+.navbar__brand {
+  font-family: var(--fh-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.66rem;
+  font-weight: 400;
+}
+
+.navbar__title {
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.navbar__logo {
+  height: 1.4rem;
+  margin-right: 0.6rem;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--fh-ink);
+  text-decoration: none;
+}
+
+/* ---------- sidebar & toc ---------- */
+
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--fh-line) !important;
+}
+
+.menu__link,
+.menu__caret {
+  border-radius: 0;
+}
+
+.menu__list-item-collapsible > .menu__link {
+  font-family: var(--fh-mono);
+  text-transform: uppercase;
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+}
+
+.menu > .menu__list > .menu__list-item > .menu__link {
+  font-family: var(--fh-mono);
+  text-transform: uppercase;
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  box-shadow: inset 2px 0 0 var(--fh-orange);
+  font-weight: 700;
+}
+
+.table-of-contents {
+  border-left: 1px solid var(--fh-line);
+  font-size: 0.78rem;
+}
+
+.table-of-contents__link--active {
+  font-weight: 700;
+}
+
+.breadcrumbs__item .breadcrumbs__link {
+  border-radius: 0;
+  font-family: var(--fh-mono);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ---------- content primitives ---------- */
+
+.markdown table {
+  display: table;
+  width: 100%;
+  font-size: 0.92rem;
+}
+
+.markdown table th {
+  font-family: var(--fh-mono);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  color: var(--fh-ink-2);
+  vertical-align: bottom;
+}
+
+.markdown blockquote {
+  border-left-width: 3px;
+  background: var(--fh-surface);
+  padding: 1rem 1.2rem;
+}
+
+.markdown kbd {
+  border-radius: 0;
+  font-family: var(--fh-mono);
+}
+
+.alert {
+  border: 1px solid var(--fh-line-strong);
+  border-left-width: 3px;
+  --ifm-alert-background-color: var(--fh-surface);
+  --ifm-alert-background-color-highlight: transparent;
+}
+
+.alert a {
+  text-decoration-color: currentColor;
+}
+
+/* Admonition titles pick up the mono/caps treatment of a .mono label. */
+.theme-admonition .admonitionHeading_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module,
+.theme-admonition > div:first-child {
+  font-family: var(--fh-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+}
+
+.pagination-nav__link {
+  border: 1px solid var(--fh-line-strong);
+}
+
+.pagination-nav__sublabel {
+  font-family: var(--fh-mono);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.pagination-nav__label {
+  font-variation-settings: 'wdth' 112;
+  font-weight: 700;
+}
+
+:focus-visible {
+  outline: 3px solid var(--fh-orange);
+  outline-offset: 3px;
+}
+
+/* ---------- footer ---------- */
+
+/* `style: 'dark'` puts `.footer--dark` on the element, and Infima redefines
+   the footer variables *on that class* — so setting them on :root is not
+   enough and the footer comes out Infima grey instead of the landing page's
+   near-black join slab. Override on the class. */
+.footer--dark {
+  --ifm-footer-background-color: var(--fh-slab);
+  --ifm-footer-color: var(--fh-on-slab);
+  --ifm-footer-link-color: rgba(223, 226, 214, 0.72);
+  --ifm-footer-title-color: var(--fh-on-slab);
+  border-top: 1px solid var(--fh-line-strong);
+}
+
+.footer__title {
+  font-family: var(--fh-mono);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 400;
+  color: rgba(223, 226, 214, 0.62);
+}
+
+.footer__link-item:hover {
+  color: var(--fh-orange);
+}
+
+.footer__copyright {
+  font-family: var(--fh-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  color: rgba(223, 226, 214, 0.62);
+}
+
+/* ---------- search ---------- */
+
+/* The local-search plugin ships its own rounded, light input; square it off
+   and put it on the page ground so it stops reading as a foreign widget. */
+.navbar__search-input,
+.DocSearch-Button {
+  border-radius: 0;
+  border: 1px solid var(--fh-line);
+  background: var(--fh-surface);
+  font-family: var(--fh-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+  color: var(--fh-ink);
+}
+
+.navbar__search-input::placeholder {
+  color: var(--fh-ink-2);
+  text-transform: uppercase;
+}
