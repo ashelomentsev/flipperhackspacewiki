@@ -92,5 +92,8 @@ discovers at 3am.
 
 ## Adding a tool page
 
-Copy the **[tool page template](./tool-page-template.md)** into the right folder. The sidebar is
-generated from the folder tree, so a new file appears on its own — then add its row above.
+From your browser, no checkout — the **[tool page template](./tool-page-template.md)** has the
+steps and the new-file links. The sidebar is generated from the folder tree, so a new file
+appears on its own; then add its row to the table above.
+
+New to this? [Editing this wiki](../contributing.md) is the two-minute version.

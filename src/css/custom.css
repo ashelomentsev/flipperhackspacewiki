@@ -372,3 +372,56 @@ h2 {
   color: var(--fh-ink-2);
   text-transform: uppercase;
 }
+
+/* ---------- edit this page ---------- */
+
+/* This link is not decoration: it is the entire contribution path for the
+   wiki. A member with no checkout, no Node and no command line clicks it,
+   edits in GitHub's browser editor, and proposes the change. Docusaurus
+   renders it as small grey text under the page, which reads as a footnote —
+   so it gets the same square bordered treatment as a .btn on the landing
+   page, and sits where the eye lands after the last paragraph. */
+.theme-doc-footer-edit-meta-row {
+  align-items: center;
+}
+
+.theme-edit-this-page {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--fh-mono);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.7em 1.1em;
+  border: 1px solid var(--fh-line-strong);
+  color: var(--fh-ink);
+  background: transparent;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+.theme-edit-this-page:hover {
+  text-decoration: none;
+  color: var(--fh-on-bright);
+  background: var(--fh-orange);
+  border-color: var(--fh-on-bright);
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 var(--fh-line-strong);
+}
+
+/* The pencil sits a touch high against uppercase mono. */
+.theme-edit-this-page svg {
+  margin-left: 0;
+  vertical-align: baseline;
+}
+
+/* "Last updated" should stay quiet next to it. */
+.theme-last-updated {
+  font-family: var(--fh-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  font-style: normal;
+  color: var(--fh-ink-2);
+}

@@ -40,8 +40,13 @@ Then get your **[inductions](./safety/getting-inducted.md)**
 
 ## This wiki is wrong somewhere
 
-If you hit something stale page or error, fix it — see [Contributing](./contributing.md). Pages carrying facts nobody has
-confirmed yet are marked with a box like this:
+If you hit something stale page or error, fix it — see [Contributing](./contributing.md).
+
+**You can do it from your browser.** Scroll to the bottom of any page and click
+**Edit this page on GitHub**. You type, you click *Propose changes*, and that opens the
+pull request for you. No install, no command line, about two minutes.
+
+Pages carrying facts nobody has confirmed yet are marked with a box like this:
 
 :::info[Needs human]
 Marked like this, this page's content is a placeholder written when by AI the wiki was set up.

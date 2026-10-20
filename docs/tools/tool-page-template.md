@@ -1,18 +1,28 @@
 ---
 title: Tool page template
 sidebar_position: 2
-description: Copy this file to create a new tool page. Keep the headings and the order.
+description: Start a new tool page from your browser. Keep the headings and the order.
 ---
 
 # Tool page template
 
-Copy this file into the folder for the floor the tool lives on, rename it after the tool,
-and fill it in. **Keep the headings and their order** — people learn where to look, and a
-tool page is read in a hurry.
+**Keep the headings and their order.** People learn where to look, and a tool page is
+read in a hurry.
 
-Then add a row to the [register](./index.md).
+## Start one from your browser
 
-Delete this intro from your copy. Everything below the line is the template.
+No checkout needed — see [Editing this wiki](../contributing.md).
+
+1. **Copy the template** below with the copy button on the block.
+2. **Open a new file** in the folder for the floor the tool lives on:
+   [electronics bench](https://github.com/ashelomentsev/flipperhackspacewiki/new/main/docs/tools/electronics) ·
+   [workshop](https://github.com/ashelomentsev/flipperhackspacewiki/new/main/docs/tools/workshop) ·
+   [RF bench](https://github.com/ashelomentsev/flipperhackspacewiki/new/main/docs/tools/rf)
+3. **Name it after the tool** — `reflow-oven.md`. Lowercase, hyphens, ending `.md`.
+4. **Paste, fill it in**, then **Commit changes → Propose changes**.
+5. **Add a row to the [register](./index.md)** — that is a second, separate edit.
+
+Everything below the line is the template. Do not copy this intro.
 
 ---
 

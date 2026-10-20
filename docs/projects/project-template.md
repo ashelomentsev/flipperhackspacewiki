@@ -1,16 +1,25 @@
 ---
 title: Project template
 sidebar_position: 2
-description: Copy this to start a project page. Keep the headings; fill in what you have.
+description: Start a project page from your browser. Keep the headings; fill in what you have.
 ---
 
 # Project template
 
-Copy this file into [Projects](./index.md), rename it after your project, and fill in what you
-have. **Keep the headings** — people skim for "what I need help with" and it should always be in
-the same place.
+**Keep the headings.** People skim for "what I need help with", and it should always be
+in the same place.
 
-Delete this intro from your copy. Everything below the line is the template.
+## Start one from your browser
+
+No checkout needed — see [Editing this wiki](../contributing.md).
+
+1. **Copy the template** below with the copy button on the block.
+2. **[Open a new file in `docs/projects/`](https://github.com/ashelomentsev/flipperhackspacewiki/new/main/docs/projects).**
+3. **Name it after the project** — `walking-robot.md`. Lowercase, hyphens, ending `.md`.
+4. **Paste, fill in what you have**, then **Commit changes → Propose changes**.
+5. **Add a row to the [projects list](./index.md)** — that is a second, separate edit.
+
+Everything below the line is the template. Do not copy this intro.
 
 ---
 

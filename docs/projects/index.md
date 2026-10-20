@@ -38,8 +38,11 @@ Add your row when you add your page.
 
 ## Starting one
 
-Copy the **[project template](./project-template.md)** into this folder, named after the project.
-The sidebar is generated from the folder tree, so it appears on its own — then add a row above.
+From your browser, no checkout: copy the **[project template](./project-template.md)**, then
+**[open a new file in `docs/projects/`](https://github.com/ashelomentsev/flipperhackspacewiki/new/main/docs/projects)** and paste it. The sidebar is generated
+from the folder tree, so it appears on its own — then add a row to the table above.
+
+New to this? [Editing this wiki](../contributing.md) is the two-minute version.
 
 A page is worth starting when you have **a goal and a first problem**. Not when it works. A page
 that only appears once a project succeeded is a page that hid all the interesting parts.

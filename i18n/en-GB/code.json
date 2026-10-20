@@ -1,0 +1,6 @@
+{
+  "theme.common.editThisPage": {
+    "message": "Edit this page on GitHub",
+    "description": "Label on the edit link at the foot of every page. It says 'on GitHub' on purpose: that link is the whole contribution process for this wiki, and a reader should know where they are about to land before clicking. Docusaurus falls back to its own English for every key not listed in this file, so this stays a one-key override rather than the 92-key dump `write-translations` produces."
+  }
+}
